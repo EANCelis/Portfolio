@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #1c1c1c;
+}
+
+header {
+    background: linear-gradient(-45deg, #b30000, #800000, #f8f9fa, #b30000);
+    background-size: 400% 400%;
+    animation: fondoAnimado 15s ease infinite;
+    color: #000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+.seccion {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#sobre-mi {
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+}
+
+#conocimientos {
+    background-color: #f0f0f0;
+}
+
+#proyectos {
+    background: linear-gradient(-45deg, #b30000, #800000, #f8f9fa, #b30000);
+    background-size: 400% 400%;
+    animation: fondoAnimado 15s ease infinite;
+}
+
+#redes {
+    background-color: #f0f0f0;
+}
+
+#redes ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+#redes ul li {
+    margin: 0 15px;
+}
+
+#redes ul li a {
+    color: #b30000;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+#redes ul li a:hover {
+    color: #800000;
+}
+
+#redes ul li a i {
+    margin-right: 8px;
+}
+
+#contacto {
+    background-color: #fff;
+    border-top: 2px solid #ddd;
+}
+
+.contenedor-sobre-mi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-perfil {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.contenedor-proyectos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-proyecto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.tarjeta-proyecto img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #f8f9fa;
+}
+
+.tarjeta-proyecto h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #b30000;
+}
+
+.tarjeta-proyecto p {
+    font-size: 14px;
+    color: #444;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.grupo-formulario {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #1c1c1c;
+}
+
+textarea {
+    height: 150px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #b30000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #800000;
+}
+
+.contenedor-conocimientos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.conocimiento {
+    text-align: center;
+    padding: 10px;
+    width: 100px;
+}
+
+.skill-icon {
+    font-size: 40px;
+    color: #b30000;
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+.conocimiento img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.conocimiento h3 {
+    font-size: 18px;
+    color: #1c1c1c;
+}
+
+a {
+    color: #b30000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #800000;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(-45deg, #b30000, #800000, #f8f9fa, #b30000);
+    background-size: 400% 400%;
+    animation: fondoAnimado 15s ease infinite;
+    color: #000;
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #333;
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+    z-index: 1000;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-lateral li {
+    margin: 15px 0;
+}
+
+.menu-lateral a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.menu-lateral a i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.menu-lateral a:hover {
+    color: #00adb5;
+    transform: scale(1.05);
+}
+
+.menu-lateral a.activo {
+    background-color: #b30000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+@keyframes fondoAnimado {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
