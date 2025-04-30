@@ -18,27 +18,36 @@ document.addEventListener("DOMContentLoaded", function () {
         mensajeExito.style.color = "green";
 
         formulario.appendChild(mensajeExito);
-
         formulario.reset();
     });
 
     window.addEventListener("scroll", function () {
         var secciones = document.querySelectorAll("section");
         var enlacesMenu = document.querySelectorAll(".menu-lateral a");
+        var seccionActiva = false;
 
         secciones.forEach(function (seccion) {
             var rect = seccion.getBoundingClientRect();
             var id = seccion.getAttribute("id");
 
             if (rect.top <= window.innerHeight * 0.7 && rect.bottom >= window.innerHeight * 0.3) {
+                seccionActiva = true;
                 enlacesMenu.forEach(function (enlace) {
                     enlace.classList.remove("activo");
-
                     if (enlace.getAttribute("href").includes(id)) {
                         enlace.classList.add("activo");
                     }
                 });
             }
         });
+
+        if (!seccionActiva) {
+            enlacesMenu.forEach(function (enlace) {
+                enlace.classList.remove("activo");
+                if (enlace.getAttribute("href").includes("sobre-mi")) {
+                    enlace.classList.add("activo");
+                }
+            });
+        }
     });
 });
