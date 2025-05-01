@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mensajeExito.style.color = "green";
 
         formulario.appendChild(mensajeExito);
+
         formulario.reset();
     });
 
@@ -30,24 +31,27 @@ document.addEventListener("DOMContentLoaded", function () {
             var rect = seccion.getBoundingClientRect();
             var id = seccion.getAttribute("id");
 
-            if (rect.top <= window.innerHeight * 0.7 && rect.bottom >= window.innerHeight * 0.3) {
+            if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.3) {
                 seccionActiva = true;
+
                 enlacesMenu.forEach(function (enlace) {
                     enlace.classList.remove("activo");
-                    if (enlace.getAttribute("href").includes(id)) {
-                        enlace.classList.add("activo");
-                    }
                 });
+
+                if (id === "conocimientos") {
+                    enlacesMenu.forEach(function (enlace) {
+                        if (enlace.getAttribute("href").includes("sobre-mi")) {
+                            enlace.classList.add("activo");
+                        }
+                    });
+                } else {
+                    enlacesMenu.forEach(function (enlace) {
+                        if (enlace.getAttribute("href").includes(id)) {
+                            enlace.classList.add("activo");
+                        }
+                    });
+                }
             }
         });
-
-        if (!seccionActiva) {
-            enlacesMenu.forEach(function (enlace) {
-                enlace.classList.remove("activo");
-                if (enlace.getAttribute("href").includes("sobre-mi")) {
-                    enlace.classList.add("activo");
-                }
-            });
-        }
     });
 });
